@@ -1,0 +1,17 @@
+[Unit]
+Description=Piim Service
+
+[Service]
+User=garfield
+WorkingDirectory=/opt/apps/piim
+ExecStart=/opt/apps/piim/piim
+SuccessExitStatus=143
+TimeoutStopSec=10
+
+Restart=on-failure
+
+RestartSec=5
+
+[Install]
+
+WantedBy=multi-user.target
